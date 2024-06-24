@@ -1,0 +1,49 @@
+// Helper function to add two numbers
+function add(a, b) {
+    return a + b;
+}
+
+// Helper function to subtract one number from another
+function subtract(a, b) {
+    return a - b;
+}
+
+// Helper function to multiply two numbers
+function multiply(a, b) {
+    return a * b;
+}
+
+// Helper function to divide one number by another
+function divide(a, b) {
+    if (b === 0) {
+        console.error("Division by zero is not allowed.");
+        return null;
+    }
+    return a / b;
+}
+
+// Main function to perform arithmetic operations
+function performOperation(operation, a, b) {
+    switch (operation) {
+        case 'add':
+            return add(a, b);
+        case 'subtract':
+            return subtract(a, b);
+        case 'multiply':
+            return multiply(a, b);
+        case 'divide':
+            return divide(a, b);
+        default:
+            console.error("Invalid operation.");
+            return null;
+    }
+}
+
+// Example usage
+let num1 = 10;
+let num2 = 5;
+
+console.log("Addition:", performOperation('add', num1, num2));         // 15
+console.log("Subtraction:", performOperation('subtract', num1, num2)); // 5
+console.log("Multiplication:", performOperation('multiply', num1, num2)); // 50
+console.log("Division:", performOperation('divide', num1, num2));      // 2
